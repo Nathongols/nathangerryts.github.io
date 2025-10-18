@@ -1,10 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
+<p align="center">This page is under construction~ Check back in time</p>
 <div id="main">
-<h1 class="title">
-  STOP!!!! This site is undergoing massive renos goober, come back laterr
-</h1>
-<p><a href="{{ get_url(path='@/prose/_index.md')}}">Prose</a>.</p>
+  <h1 class="title" align="center">
+    Nathan Gerryts
+  </h1>
+  <div id="page-links">
+    <center>
+      <p><a href="{{ get_url(path='@/prose/_index.md')}}">Musings</a>  <a href="{{ get_url(path='@/videos/_index.md')}}">Moving Pictures</a></p>
+    </center>
+  </div>
 </div>
 {% endblock content %}
