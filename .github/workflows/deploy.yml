@@ -8,19 +8,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      # Step 1: Checkout your repo
+      - uses: actions/checkout@v4
 
-      - name: Install Zola
-        run: |
-          curl -sL https://github.com/getzola/zola/releases/latest/download/zola-v0.19.2-x86_64-unknown-linux-gnu.tar.gz | tar xz
-          sudo mv zola /usr/local/bin/
+      # Step 2: Install Zola via the official action
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: zola@0.19.2  # specify the version you want
 
-      - name: Build site
-        run: zola build
+      # Step 3: Build the site
+      - run: zola build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      # Step 4: Deploy to GitHub Pages
+      - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
