@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: https://nathangerryts-media.com/sitemap.xml
+Sitemap: https://nathangerryts.com/sitemap.xml
