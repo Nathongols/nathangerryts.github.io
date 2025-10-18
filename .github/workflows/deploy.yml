@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,8 +22,15 @@ jobs:
       # Step 3: Build the site
       - run: zola build
 
-      # Step 4: Deploy to GitHub Pages
-      - uses: peaceiris/actions-gh-pages@v4
+      # Step 4: Add custom domain CNAME file
+      - name: Add CNAME
+        run: echo "nathangerryts.com" > public/CNAME
+
+      # Step 5: Deploy to GitHub Pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_PAGES_PAT }}
           publish_dir: ./public
+          # Optional but helpful: disables Jekyll (ensures _ files aren't ignored)
+          enable_jekyll: false
