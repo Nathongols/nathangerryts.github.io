@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>nathangerryts</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body style="background:url('/gifs/stars4.gif');">
+  <div class="container"> 
+    
+<main>
+  <div class="left-container">
+    <!-- Nav SideBar -->
+    <div class="sidebar">
+      <aside>
+        <p> <a href="https://nathangerryts.com/videos/">Moving Pictures</a></p>
+      </aside>
+    </div>
+    <div class="sidebar">
+      <aside>
+        <p>aside2</p>
+      </aside>
+    </div>
+  </div>
+  <div class="center-container">
+    <h1 class="title">
+      Html and CSS
+    </h1>
+    <p class="subtitle"><strong>2025-10-19</strong></p>
+    <p>This is myself writing after wrapping up a second days work on this website, here's a log of what I've added...</p>
+<p>Containers! I have now figured out a good system for the home page with three containers I can easily slot in extra sidebars
+wherever I need. I believe the sizing <em>should</em> work with most screen sizes, but it's probably best if you're reading this on a desktop.
++++</p>
+<p><strong>The Base.html</strong></p>
+<pre data-lang="html" style="background-color:#2b303b;color:#c0c5ce;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;!</span><span style="color:#b48ead;">DOCTYPE </span><span style="color:#d08770;">html</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">html </span><span style="color:#d08770;">lang</span><span>=&quot;</span><span style="color:#a3be8c;">en</span><span>&quot;&gt;
+</span><span>  &lt;</span><span style="color:#bf616a;">head</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">meta </span><span style="color:#d08770;">charset</span><span>=&quot;</span><span style="color:#a3be8c;">utf-8</span><span>&quot;&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">title</span><span>&gt;nathangerryts&lt;/</span><span style="color:#bf616a;">title</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">link </span><span style="color:#d08770;">rel</span><span>=&quot;</span><span style="color:#a3be8c;">stylesheet</span><span>&quot; </span><span style="color:#d08770;">href</span><span>=&quot;</span><span style="color:#a3be8c;">/css/style.css</span><span>&quot;&gt;
+</span><span>  &lt;/</span><span style="color:#bf616a;">head</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#bf616a;">body </span><span style="color:#d08770;">style</span><span>=&quot;background:</span><span style="color:#96b5b4;">url</span><span>(&#39;</span><span style="color:#a3be8c;">/gifs/stars4.gif</span><span>&#39;);&quot;&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">container</span><span>&quot;&gt; 
+</span><span>      {% block content %} {% endblock content %}
+</span><span>    &lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>  &lt;/</span><span style="color:#bf616a;">body</span><span>&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">html</span><span>&gt;
+</span></code></pre>
+<p>If everything worked properly then that code block above should also be syntax highlighted. I'm currently using Zola as my static site generator. You can find the source code <a href="https://github.com/Nathongols/nathangerryts.github.io">here</a></p>
+<p>Zola uses the Tera templating engine, which is similar to other template syntax like Jinja2 and Django. You can see in the base that we define the body of the page (all page content) and create a content block that we can reference in any file we inherit.</p>
+<p><strong>The Index.md</strong></p>
+<pre data-lang="html" style="background-color:#2b303b;color:#c0c5ce;" class="language-html "><code class="language-html" data-lang="html"><span>{% extends &quot;base.html&quot; %}
+</span><span>{% block content %}
+</span><span>&lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">container</span><span>&quot;&gt; 
+</span><span>  &lt;</span><span style="color:#bf616a;">marquee </span><span style="color:#d08770;">direction</span><span>=&quot;</span><span style="color:#a3be8c;">left,</span><span>&quot; </span><span style="color:#d08770;">scrollamount</span><span>=&quot;</span><span style="color:#a3be8c;">20</span><span>&quot;&gt;WARNING!!!! THIS PAGE IS UNDER CONSTRUCTION, BROWSE AT YOUR OWN RISK!!&lt;/</span><span style="color:#bf616a;">marquee</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#bf616a;">header</span><span>&gt;&lt;/</span><span style="color:#bf616a;">header</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#bf616a;">main</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">left-container</span><span>&quot;&gt;&lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">center-container</span><span>&quot;&gt;&lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">right-container</span><span>&quot;&gt;&lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>  &lt;/</span><span style="color:#bf616a;">main</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#bf616a;">footer </span><span style="color:#d08770;">align</span><span>=&quot;</span><span style="color:#a3be8c;">center</span><span>&quot;&gt;&lt;/</span><span style="color:#bf616a;">footer</span><span>&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>{% endblock content %}
+</span></code></pre>
+<p>These three divisions are how I divied up my page content for now, the center-container class handles my main page content across the site, with the left and right containers to add additional content if needed.
+currently there exists one class for sidebar content (called sidebar) but I plan to create a number of different template classes to mix and match at will.</p>
+<p><strong>The Style.css</strong></p>
+<pre data-lang="css" style="background-color:#2b303b;color:#c0c5ce;" class="language-css "><code class="language-css" data-lang="css"><span style="color:#8fa1b3;">.</span><span style="color:#d08770;">center-container </span><span>{
+</span><span>  background-color:black;
+</span><span>  border-image-source: </span><span style="color:#96b5b4;">url</span><span>(&#39;</span><span style="color:#a3be8c;">/pngs/MSDOS-header-border.png</span><span>&#39;);
+</span><span>  border-image-slice: </span><span style="color:#d08770;">28 56 6 56</span><span>;
+</span><span>  border-image-repeat: round;
+</span><span>  border-style: solid;
+</span><span>  border-width: </span><span style="color:#d08770;">28px 56px 6px 56px</span><span>;
+</span><span>  image-rendering: pixelated;
+</span><span>  color:</span><span style="color:#96b5b4;">#FFFFFF</span><span>;
+</span><span>  padding: </span><span style="color:#d08770;">0px 20px 20px 20px</span><span>;
+</span><span>  width: </span><span style="color:#d08770;">100%</span><span>;
+</span><span>  height:auto;
+</span><span>}
+</span><span>  
+</span></code></pre>
+<p>Style! much of todays was spent configuring my base style.css, big props to solaria for an amazing <a href="https://solaria.neocities.org/guides/borderimage/">guide</a> to border images in css, (and the lace borders &lt;3).
+Took a little bit, but I managed to create the MSDOS window border that you're seeing this post in right now!</p>
+<p>The foundation has now been set so I have a pretty good system to continue pushes content to this page. Keep an eye out!</p>
+
+  </div>
+  <div class="right-container">
+    <!-- Nav SideBar -->
+    <div class="sidebar">
+      <aside>
+        <p><a href="https://nathangerryts.com/prose/">Musings</a></p>
+      </aside>
+    </div>
+  </div>
+</main>
+
+  </div>
+</body>
+
+</html>
