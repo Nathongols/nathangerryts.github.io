@@ -1,9 +1,34 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  {{ page.title }}
-</h1>
-<p class="subtitle"><strong>{{ page.date }}</strong></p>
-{{ page.content | safe }}
+<main>
+  <div class="left-container">
+    <!-- Nav SideBar -->
+    <div class="sidebar">
+      <aside>
+        <p> <a href="{{ get_url(path='@/videos/_index.md')}}">Moving Pictures</a></p>
+      </aside>
+    </div>
+    <div class="sidebar">
+      <aside>
+        <p>aside2</p>
+      </aside>
+    </div>
+  </div>
+  <div class="center-container">
+    <h1 class="title">
+      {{ page.title }}
+    </h1>
+    <p class="subtitle"><strong>{{ page.date }}</strong></p>
+    {{ page.content | safe }}
+  </div>
+  <div class="right-container">
+    <!-- Nav SideBar -->
+    <div class="sidebar">
+      <aside>
+        <p><a href="{{ get_url(path='@/prose/_index.md')}}">Musings</a></p>
+      </aside>
+    </div>
+  </div>
+</main>
 {% endblock content %}

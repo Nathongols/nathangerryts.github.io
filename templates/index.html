@@ -1,15 +1,71 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p align="center">This page is under construction~ Check back in time</p>
-<div id="main">
-  <h1 class="title" align="center">
-    Nathan Gerryts
-  </h1>
-  <div id="page-links">
-    <center>
-      <p><a href="{{ get_url(path='@/prose/_index.md')}}">Musings</a>  <a href="{{ get_url(path='@/videos/_index.md')}}">Moving Pictures</a></p>
-    </center>
+<marquee direction="left," scrollamount="20">
+  <img src="/gifs/small_caprisun.gif" alt="under-construction!" class="marquee-gif">
+  <!-- <img src="/gifs/under-construction-banner.gif" alt="under-construction!"> -->
+    WARNING!!!! THIS PAGE IS UNDER CONSTRUCTION, BROWSE AT YOUR OWN RISK!!
+  <!-- <img src="/gifs/under-construction-banner.gif" alt="under-construction!"> -->
+  <img src="/gifs/small_caprisun.gif" alt="under-construction!" class="marquee-gif">
+</marquee>
+<header>
+  <img src="/gifs/under-construction-banner.gif" alt="under-construction!">
+</header>
+<main>
+  <div class="left-container">
+    <!-- Nav SideBar -->
+    <div class="sidebar">
+      <aside>
+        <p> <a href="{{ get_url(path='@/videos/_index.md')}}">Moving Pictures</a></p>
+      </aside>
+    </div>
+    <div class="sidebar">
+      <aside>
+        <img src="/gifs/under-construction-button.gif" alt="under-construction!">
+      </aside>
+    </div>
   </div>
-</div>
+  <div class="center-container">
+    <h1 class="title" align="center">
+      Nathan Gerryts
+    </h1>
+    <div style="text-align: center;">
+      <img src="/gifs/nathongols-gerryts.gif" alt="nathan" width="50%">
+    </div>
+    <h4 align="center">The one stop shop for anything you want to find about me</h4>
+    {% set section = get_section(path="prose/_index.md") %}
+    {% for page in section.pages %}
+      <div class="post">
+        <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
+        <p class="date">{{ page.date }}</p>
+        <div class="content">
+          {{ page.content | split(pat="+++") | first | safe }}
+          <a href="{{ page.permalink }}">Read more...</a>
+        </div>
+      </div>
+    {% endfor %}
+    <div id="page-links">
+      <center>
+      </center>
+    </div>
+  </div>
+  <div class="right-container">
+    <!-- Nav SideBar -->
+    <div class="sidebar">
+      <aside>
+        <p><a href="{{ get_url(path='@/prose/_index.md')}}">Musings</a></p>
+      </aside>
+    </div>
+    <div class="sidebar">
+      <aside>
+        <img src="/gifs/cat-hello.gif" alt="cat">
+      </aside>
+    </div>
+  </div>
+</main>
+<footer align="center">
+  <img src="/gifs/chibi-ryu.gif" alt="ryu">
+  <img src="/gifs/chibi-ken.gif" alt="ken" style= "transform: scaleX(-1);")>
+</footer>
+
 {% endblock content %}

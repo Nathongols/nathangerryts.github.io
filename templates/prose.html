@@ -1,14 +1,39 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  {{ section.title }}
-</h1>
-<ul>
-  <!-- If you are using pagination, section.pages will be empty.
-       You need to use the paginator object -->  
-  {% for page in section.pages %}
-  <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-  {% endfor %}
-</ul>
+<main>
+  <div class="left-container">
+    <!-- Nav SideBar -->
+    <div class="sidebar">
+      <aside>
+        <p> <a href="{{ get_url(path='@/videos/_index.md')}}">Moving Pictures</a></p>
+      </aside>
+    </div>
+    <div class="sidebar">
+      <aside>
+        <p>aside2</p>
+      </aside>
+    </div>
+  </div>
+  <div class="center-container">
+    <h1 class="title">
+      {{ section.title }}
+    </h1>
+    <ul>
+      <!-- If you are using pagination, section.pages will be empty.
+           You need to use the paginator object -->  
+      {% for page in section.pages %}
+      <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="right-container">
+    <!-- Nav SideBar -->
+    <div class="sidebar">
+      <aside>
+        <p><a href="{{ get_url(path='@/prose/_index.md')}}">Musings</a></p>
+      </aside>
+    </div>
+  </div>
+</main>
 {% endblock content %}
