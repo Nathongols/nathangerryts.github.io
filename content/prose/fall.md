@@ -1,4 +1,7 @@
-+++ title = "Fall Weather" date = 2025-10-21 +++
++++
+title = "Fall Weather"
+date = 2025-10-23
++++
 
 Fall is in full swing in the area that I live. The air is brisk and the leaves are making there way to the ground. +++
 
