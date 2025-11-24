@@ -1,0 +1,34 @@
++++
+title = "Florida Trip"
+date = 2025-11-23
++++
+
+It is with great fatigue that I make my return. 
+
+All my life I have never traveled. No vacations or camping trips, our family prefered to spend our time at home. So when I was given the oppurtunity to take a vacation to Florida I happily obliged. Here are some thoughts. +++
+
+The plane ride was quite enjoyable, I had never rode in a plane so I found it fascinating. The speed of takeoff! The height of 40,000ft! I was in awe. It felt a little sureal that I was traveling on what is essentially
+a box with wings and jet engines attached... terrifying at times. The view from my window was breathtaking, as if I was looking at a secret country on top of the clouds. The dips and valleys in the cloudscape made me think like a kid again, tracing
+a path that imaginary cars and buildings could occupy. During landing seeing the small cities, roads, cars, trains, boats as if they were all part of a miniature model set, let me visually see the scale of human habitation in a way I never have seen before.
+
+Orlando, were I was staying for the week, was pleasant. I enjoyed the warm weather, the tropical trees, the differing wildlife. I didn't enjoy the large roads, vast amount of car infrastructure and abundant amount of disney paraphernalia.
+As soon as I landed I understood that Orlando was dominated by resorts, and that seeps into the network of the city, into conversations with locals. At any turn you would walk into tourist traps, any small talk was about Seaword/Universal Orlando/Disney.
+Just didn't taste right to me, but I could see why people would enjoy the enviroment. Partially was due to not doing my due dilligence to research exciting places to explore definitely. The one place I managed to get to was Statios Deli, which may have been the best sandwich
+I have eaten to date. It's a miracle was you can do with just a well done bun, meat and cheese. 
+
+The wildlife was fascinating! Many of the creatures were very much accustomed to people, due to tourist frequently feeding them no doubt. Walking out your back porch to find snapping turtles, armodillos, these creatures I spent all my childhood looking at in pictures books just there in front of me.
+I really should have visted Gatorland...
+
+Most days I spent eating food, playing board games, and sitting by the poolside. I enjoyed that I, and those I was staying with, didn't pack our schedules with lots of planned events, it gave me the break I needed from business. 
+
+All in all I feel quite refreshed, exhausted but refreshed. I have a renewed energy to get back to my regular life, see my friends, my family and my collegues. The leaves have fallen off the trees here in Ontario. The neighbors have put up the christmas lights. 
+
+
+Also... did you see the Cloudflare outage the happened on Tuesday? I missed that because of vacation (sorry coworkers). But hopefully that further emphasises my point of the importance of
+decentralizing the internet.
+
+Bedtime. 
+
+
+
+ 
