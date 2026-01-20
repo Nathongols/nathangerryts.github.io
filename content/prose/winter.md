@@ -1,6 +1,6 @@
 +++
 title = "2026"
-date = 2025-01-02
+date = 2026-01-02
 +++
 
 The air rests over the lake heavy   
