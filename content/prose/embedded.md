@@ -1,5 +1,5 @@
 +++
-title = "Scenes imprinted (working)"
+title = "Scenes imprinted"
 date = 2026-02-10
 +++
  
